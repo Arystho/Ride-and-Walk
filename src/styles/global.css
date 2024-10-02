@@ -1,0 +1,68 @@
+/* ---------- font ---------- */
+@import url('https://fonts.googleapis.com/css2?family=Open+Sans:ital,wght@0,300..800;1,300..800&display=swap');
+
+/* ---------- général ---------- */
+:root {
+    --black: #000000;
+    --blue: #1791C8;
+    --white: #FFFFFF;
+    --open-sans: 'Open Sans', sans-serif;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    color: var(--black);
+    font-family: var(--open-sans);
+    font-size: 16px;
+    line-height: 1.5;
+}
+
+a {
+    text-decoration: none;
+    color: var(--black);
+}
+
+ul {
+    list-style: none;
+}
+
+/* img {
+    max-width: 100%;
+    height: auto;
+} */
+
+h1 {
+    font-size: 50px;
+    font-weight: 700;
+    font-family: italic;
+    color: var(--white);
+}
+
+h2 {
+    font-size: 36px;
+    font-weight: 700;
+    font-family: italic;
+    color: var(--white);
+}
+
+h3 {
+    font-size: 22px;
+    font-weight: 700;
+    font-family: italic;
+    color: var(--white);
+}
+
+p{
+    font-size: 16px;
+    font-weight: 400;
+    color: var(--white);
+}
+
+a:hover {
+    color: var(--blue);
+}

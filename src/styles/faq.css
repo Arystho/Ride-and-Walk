@@ -1,0 +1,27 @@
+#faq-section{
+    background-image:url('/img/Back-FAQ.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+}
+
+#faq-section-overlay{
+    background-color: rgba(0, 0, 0, 0.5);
+    /* width: 100%; */
+    height: 100%
+}
+
+#faq-section .container{
+    display: flex;
+    flex-direction: column;
+    /* justify-items: center; */
+    padding: 32px;
+    gap: 30px;
+}
+
+#faq-section .titles{
+    display: grid;
+    justify-items: center;
+    gap: 7px;
+}
