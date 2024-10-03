@@ -4,8 +4,12 @@
     background-position: center;
     background-repeat: no-repeat;
     height: 100%;
-    display: grid;
+    display: flex;
     justify-content: center;
+}
+
+.main-connection{
+    height: 100vh;
 }
 
 .login-container{
@@ -14,8 +18,10 @@
     border: 0.5px solid var(--blue);
     padding: 36px;
     border-radius: 10px;
-    width: 300px;
+    /* width: 300px; */
     text-align: center;
+    height: fit-content;
+    margin: auto;
 }
 
 .login-container input{
@@ -31,6 +37,7 @@
     font-size: 12px;
     text-align: left;
 }
+
 .login-container button{
     width: 100%;
     padding: 10px;

@@ -1,13 +1,12 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import logo from '../img/Black_White_Elegant_Monogram_Initial_Name_Logo-removebg-preview.png';
 
 export default function Header() {
     return (
         <header>
             <div>
                 <Link to="/">
-                    <img src={logo} alt="logo" id="logo" />
+                <img id="logo" src="img/Black_White_Elegant_Monogram_Initial_Name_Logo-removebg-preview.png" alt="logo"/>
                 </Link>
                 <nav>
                     <ul>
@@ -17,7 +16,7 @@ export default function Header() {
                         <li><Link to="/profile">Profile</Link></li>
                     </ul>
                 </nav>
-                <Link to="/login" id="connect">Se connecter</Link>
+                <Link to="/connection" id="connect">Se connecter</Link>
             </div>
         </header>
     );

@@ -11,9 +11,9 @@ export default function Footer() {
             </div>
             <nav>
                 <ul>
-                    <li><a href="#">Assistance</a></li>
-                    <li><a href="#">Nous contacter</a></li>
-                    <li><a href="faq.html">FAQ</a></li>
+                    <li><Link to="#">Assistance</Link></li>
+                    <li><Link to="#">Nous contacter</Link></li>
+                    <li><Link to="/faq">FAQ</Link></li>
                 </ul>
             </nav>
         </div>
