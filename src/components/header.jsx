@@ -1,4 +1,5 @@
 import React from 'react';
+import '../styles/header.css';
 import { Link } from 'react-router-dom';
 
 export default function Header() {
@@ -6,7 +7,7 @@ export default function Header() {
         <header>
             <div>
                 <Link to="/">
-                <img id="logo" src="img/Black_White_Elegant_Monogram_Initial_Name_Logo-removebg-preview.png" alt="logo"/>
+                <img id="logo" src="/Black_White_Elegant_Monogram_Initial_Name_Logo-removebg-preview.png" alt="logo"/>
                 </Link>
                 <nav>
                     <ul>

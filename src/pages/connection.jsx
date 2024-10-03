@@ -4,16 +4,19 @@ import { Link } from 'react-router-dom';
 
 export default function Connection () {
     return (
-        <main>
-            <div className="backgroundConnection">
-                <img src="/img/Black_White_Elegant_Monogram_Initial_Name_Logo-removebg-preview.png" alt="logo" className="logo"/>
+        <main className="main-connection">
+        <section className="background-connection">
+            <article className="login-container">
+                <img src="/Black_White_Elegant_Monogram_Initial_Name_Logo-removebg-preview.png" alt="logo" className="logo"/>
                 <h2>Connexion</h2>
                 <form>
                     <div>
-                        <input type="email" placeholder="Email" />
+                        <p>Email</p>
+                        <input type="email" id="email" name="email" placeholder="Email"/>
                     </div>
                     <div>
-                        <input type="password" placeholder="Mot de passe" />
+                        <p>Mot de passe</p>
+                        <input type="password" id="password" name="password" placeholder="Mot de passe"/>
                     </div>
                     <div>
                         <button type="submit">Connexion</button>
@@ -21,7 +24,8 @@ export default function Connection () {
                 </form>
                 <p>Vous n'avez pas de compte ?</p>
                 <Link to="#">Inscrivez-vous gratuitement</Link>
-            </div>
-        </main>
+            </article>
+        </section>
+    </main>
     );
 };

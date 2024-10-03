@@ -1,5 +1,5 @@
 #section-1 .background-container {
-    background-image: url('/img/bike-in-forest.jpg');
+    background-image: url('/bike-in-forest.jpg');
     background-size: cover;
     background-position: center;
     background-repeat: no-repeat;
@@ -27,5 +27,4 @@
 }
 #section-1 .nav-container{
     background: var(--black);
-    
 }
