@@ -1,0 +1,82 @@
+#validation-email {
+    height: 100vh;
+}
+
+.background-validation {
+    background-image: url('/pexels-anastasia-shuraeva-8926961.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.validation-container {
+    background-color: rgba(0, 0, 0, 0.1);
+    backdrop-filter: blur(8px);
+    border: 0.5px solid var(--blue);
+    padding: 36px;
+    border-radius: 10px;
+    text-align: center;
+    width: 90%;
+    max-width: 400px;
+    margin: auto;
+}
+
+.validation-container h2 {
+    color: var(--white);
+    margin-bottom: 20px;
+}
+
+.email-icon {
+    font-size: 48px;
+    color: var(--blue);
+    margin-bottom: 20px;
+}
+
+.validation-container p {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.validation-container .message {
+    font-size: 16px;
+    font-weight: bold;
+}
+
+.validation-container .spam-note {
+    font-size: 12px;
+    font-style: italic;
+}
+
+.validation-container .resend {
+    margin-top: 20px;
+    font-size: 14px;
+}
+
+.validation-container .resend-link {
+    color: var(--blue);
+    text-decoration: none;
+    font-weight: bold;
+    transition: color 0.3s ease;
+}
+
+.validation-container .resend-link:hover {
+    color: var(--white);
+}
+
+.return{
+    color: var(--white);
+    font-size: 12px;
+    display: flex;
+    justify-content: center;
+    margin-top: 15px;
+}
+
+.logo {
+    width: 125px;
+    max-width: 100%;
+    height: auto;
+}

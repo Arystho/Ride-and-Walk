@@ -1,4 +1,8 @@
-.background-connection{
+#mot-de-passe-oublie {
+    height: 100vh;
+}
+
+.background-mdp-oublie {
     background-image: url('/pexels-anastasia-shuraeva-8926961.jpg');
     background-size: cover;
     background-position: center;
@@ -6,38 +10,38 @@
     height: 100%;
     display: flex;
     justify-content: center;
+    align-items: center;
 }
 
-.main-connection{
-    height: 100vh;
-}
-
-.login-container{
+.mdp-oublie-container {
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8px);
     border: 0.5px solid var(--blue);
     padding: 36px;
     border-radius: 10px;
     text-align: center;
-    height: fit-content;
+    width: 90%;
+    max-width: 400px;
     margin: auto;
 }
 
-.login-container input{
+.mdp-oublie-container input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
     border-radius: 5px;
     border: 1px solid var(--blue);
+    box-sizing: border-box;
 }
 
-.login-container form p{
+.mdp-oublie-container form p {
     color: var(--white);
     font-size: 12px;
     text-align: left;
+    margin-bottom: 5px;
 }
 
-.login-container button{
+.mdp-oublie-container button {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -45,28 +49,39 @@
     border: 1px solid var(--blue);
     background: var(--blue);
     color: var(--white);
+    cursor: pointer;
+    transition: all 0.3s ease;
 }
 
-.login-container button:hover{
+.mdp-oublie-container button:hover {
     background: var(--white);
     color: var(--blue);
 }
 
-.login-container a{
+.mdp-oublie-container a {
     color: var(--white);
     font-size: 12px;
+    text-decoration: none;
+    transition: color 0.3s ease;
 }
 
-.login-container a:hover{
+.mdp-oublie-container a:hover {
     color: var(--blue);
 }
 
-.forgot{
-    color: var(--white);
-    font-size: 12px;
-    display: flex;
+.logo {
+    width: 125px;
+    max-width: 100%;
+    height: auto;
 }
 
-.logo{
-    width: 125px;
+.mdp-oublie-container h2 {
+    color: var(--white);
+    margin-bottom: 15px;
+}
+
+.mdp-oublie-container > p {
+    color: var(--white);
+    font-size: 14px;
+    margin-bottom: 20px;
 }

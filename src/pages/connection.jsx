@@ -1,8 +1,7 @@
-import React from 'react';
 import '../styles/connection.css';
 import { Link } from 'react-router-dom';
 
-export default function Connection () {
+export default function Connection() {
     return (
         <main className="main-connection">
         <section className="background-connection">
@@ -18,12 +17,13 @@ export default function Connection () {
                         <p>Mot de passe</p>
                         <input type="password" id="password" name="password" placeholder="Mot de passe"/>
                     </div>
+                    <Link to="/motDePasseOublie" className="forgot">Mot de passe oublié ?</Link>
                     <div>
                         <button type="submit">Connexion</button>
                     </div>
                 </form>
                 <p>Vous n'avez pas de compte ?</p>
-                <Link to="#">Inscrivez-vous gratuitement</Link>
+                <Link to="/inscription">Inscrivez-vous gratuitement</Link>
             </article>
         </section>
     </main>

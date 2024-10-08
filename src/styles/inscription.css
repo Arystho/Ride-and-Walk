@@ -1,4 +1,8 @@
-.background-connection{
+#inscription {
+    height: 100vh;
+}
+
+.background-inscription {
     background-image: url('/pexels-anastasia-shuraeva-8926961.jpg');
     background-size: cover;
     background-position: center;
@@ -8,22 +12,18 @@
     justify-content: center;
 }
 
-.main-connection{
-    height: 100vh;
-}
-
-.login-container{
+.signup-container {
     background-color: rgba(0, 0, 0, 0.1);
     backdrop-filter: blur(8px);
     border: 0.5px solid var(--blue);
-    padding: 36px;
+    padding: 32px;
     border-radius: 10px;
     text-align: center;
     height: fit-content;
     margin: auto;
 }
 
-.login-container input{
+.signup-container input {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -31,13 +31,13 @@
     border: 1px solid var(--blue);
 }
 
-.login-container form p{
+.signup-container form p {
     color: var(--white);
     font-size: 12px;
     text-align: left;
 }
 
-.login-container button{
+.signup-container button {
     width: 100%;
     padding: 10px;
     margin: 10px 0;
@@ -47,26 +47,20 @@
     color: var(--white);
 }
 
-.login-container button:hover{
+.signup-container button:hover {
     background: var(--white);
     color: var(--blue);
 }
 
-.login-container a{
+.signup-container a {
     color: var(--white);
     font-size: 12px;
 }
 
-.login-container a:hover{
+.signup-container a:hover {
     color: var(--blue);
 }
 
-.forgot{
-    color: var(--white);
-    font-size: 12px;
-    display: flex;
-}
-
-.logo{
+.logo {
     width: 125px;
 }

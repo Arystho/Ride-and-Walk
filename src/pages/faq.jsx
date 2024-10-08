@@ -1,4 +1,3 @@
-import React from 'react';
 import '../styles/faq.css';
 import Header from '../components/header';
 import Footer from '../components/footer';
