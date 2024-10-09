@@ -1,22 +1,35 @@
 import React from 'react';
-import { render, screen } from '@testing-library/react';
-import { BrowserRouter as Router } from 'react-router-dom';
+import { render, screen, fireEvent, waitFor } from '@testing-library/react';
+import '@testing-library/jest-dom';
+import { BrowserRouter } from 'react-router-dom';
 import MotDePasseOublier from '../../pages/motDePassOublier';
 
-// Mock the useNavigate hook
+// Mock useNavigate
+const mockNavigate = jest.fn();
 jest.mock('react-router-dom', () => ({
     ...jest.requireActual('react-router-dom'),
-    useNavigate: () => jest.fn(),
+    useNavigate: () => mockNavigate,
 }));
 
-test('MotDePassOublier renders without crashing', () => {
-    render(
-        <Router>
-            <MotDePasseOublier />
-        </Router>
-    );
-    expect(screen.getByText('Mot de passe oublié')).toBeInTheDocument();
-});
+// Mock fetch
+global.fetch = jest.fn();
+
+describe('MotDePasseOublier', () => {
+    beforeEach(() => {
+        jest.clearAllMocks();
+    });
+
+    test('renders MotDePasseOublier component', () => {
+        render(
+            <BrowserRouter>
+                <MotDePasseOublier />
+            </BrowserRouter>
+        );
+
+        expect(screen.getByText('Mot de passe oublié')).toBeInTheDocument();
+        expect(screen.getByPlaceholderText('Votre adresse e-mail')).toBeInTheDocument();
+        expect(screen.getByText('Réinitialiser le mot de passe')).toBeInTheDocument();
+    });
 
 //     test('submits form with email and navigates on success', async () => {
 //         global.fetch.mockResolvedValueOnce({
@@ -71,4 +84,4 @@ test('MotDePassOublier renders without crashing', () => {
 
 //         consoleErrorSpy.mockRestore();
 //     });
-// });
+});
