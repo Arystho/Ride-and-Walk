@@ -1,7 +1,7 @@
 import '../styles/validationPassword.css';
 import { Link } from 'react-router-dom';
 
-export default function ValidationPassword() {
+export default function ValidationPassword() {    
     return (
 <main id="validation-password">
         <div className="background-validation-password">
