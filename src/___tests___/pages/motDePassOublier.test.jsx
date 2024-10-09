@@ -31,57 +31,57 @@ describe('MotDePasseOublier', () => {
         expect(screen.getByText('Réinitialiser le mot de passe')).toBeInTheDocument();
     });
 
-//     test('submits form with email and navigates on success', async () => {
-//         global.fetch.mockResolvedValueOnce({
-//             ok: true,
-//             json: () => Promise.resolve({ status: 'success' }),
-//         });
+    test('submits form with email and navigates on success', async () => {
+        global.fetch.mockResolvedValueOnce({
+            ok: true,
+            json: () => Promise.resolve({ status: 'success' }),
+        });
 
-//         render(
-//             <BrowserRouter>
-//                 <MotDePasseOublier />
-//             </BrowserRouter>
-//         );
+        render(
+            <BrowserRouter>
+                <MotDePasseOublier />
+            </BrowserRouter>
+        );
 
-//         fireEvent.change(screen.getByPlaceholderText('Votre adresse e-mail'), {
-//             target: { value: 'test@example.com' },
-//         });
-//         fireEvent.click(screen.getByText('Réinitialiser le mot de passe'));
+        fireEvent.change(screen.getByPlaceholderText('Votre adresse e-mail'), {
+            target: { value: 'test@example.com' },
+        });
+        fireEvent.click(screen.getByText('Réinitialiser le mot de passe'));
 
-//         await waitFor(() => {
-//             expect(global.fetch).toHaveBeenCalledWith('/api/reset-password', {
-//                 method: 'POST',
-//                 headers: {
-//                     'Content-Type': 'application/json',
-//                 },
-//                 body: JSON.stringify({ email: 'test@example.com' }),
-//             });
-//             expect(mockNavigate).toHaveBeenCalledWith('/validateEmail');
-//         });
-//     });
+        await waitFor(() => {
+            expect(global.fetch).toHaveBeenCalledWith('/api/reset-password', {
+                method: 'POST',
+                headers: {
+                    'Content-Type': 'application/json',
+                },
+                body: JSON.stringify({ email: 'test@example.com' }),
+            });
+            expect(mockNavigate).toHaveBeenCalledWith('/validateEmail');
+        });
+    });
 
-//     test('handles error when form submission fails', async () => {
-//         const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
-//         global.fetch.mockRejectedValueOnce(new Error('API Error'));
+    test('handles error when form submission fails', async () => {
+        const consoleErrorSpy = jest.spyOn(console, 'error').mockImplementation(() => { });
+        global.fetch.mockRejectedValueOnce(new Error('API Error'));
 
-//         render(
-//             <BrowserRouter>
-//                 <MotDePasseOublier />
-//             </BrowserRouter>
-//         );
+        render(
+            <BrowserRouter>
+                <MotDePasseOublier />
+            </BrowserRouter>
+        );
 
-//         fireEvent.change(screen.getByPlaceholderText('Votre adresse e-mail'), {
-//             target: { value: 'test@example.com' },
-//         });
-//         fireEvent.click(screen.getByText('Réinitialiser le mot de passe'));
+        fireEvent.change(screen.getByPlaceholderText('Votre adresse e-mail'), {
+            target: { value: 'test@example.com' },
+        });
+        fireEvent.click(screen.getByText('Réinitialiser le mot de passe'));
 
-//         await waitFor(() => {
-//             expect(consoleErrorSpy).toHaveBeenCalledWith(
-//                 'Erreur lors de la réinitialisation du mot de passe:',
-//                 expect.any(Error)
-//             );
-//         });
+        await waitFor(() => {
+            expect(consoleErrorSpy).toHaveBeenCalledWith(
+                'Erreur lors de la réinitialisation du mot de passe:',
+                expect.any(Error)
+            );
+        });
 
-//         consoleErrorSpy.mockRestore();
-//     });
+        consoleErrorSpy.mockRestore();
+    });
 });

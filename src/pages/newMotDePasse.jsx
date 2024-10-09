@@ -40,11 +40,11 @@ export default function NewMotDePasse() {
                     <form>
                         <div>
                             <p>Mot de passe </p>
-                            <input type="password" className="password" name="password" placeholder="Mot de passe" />
+                            <input data-testid="password-input" type="password" className="password" name="password" placeholder="Mot de passe" />
                         </div>
                         <div>
                             <p>Second mot de passe</p>
-                            <input type="password" className="password2" name="password" placeholder="Mot de passe" />
+                            <input data-testid="password-confirm-input" type="password" className="password2" name="password" placeholder="Mot de passe" />
                         </div>
                         <div>
                             <button type="submit">S'inscrire</button>
