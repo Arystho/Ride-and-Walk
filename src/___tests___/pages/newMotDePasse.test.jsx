@@ -28,16 +28,16 @@ describe('NewMotDePasse', () => {
         expect(screen.getByText("S'inscrire")).toBeInTheDocument();
     });
 
-    // test('inputs are working correctly', () => {
-    //     const passwordInput = screen.getByTestId('password-input');
-    //     const passwordConfirmInput = screen.getByTestId('password-confirm-input');
+    test('inputs are working correctly', () => {
+        const passwordInput = screen.getByTestId('password-input');
+        const passwordConfirmInput = screen.getByTestId('password-confirm-input');
 
-    //     fireEvent.change(passwordInput, { target: { value: 'password123' } });
-    //     fireEvent.change(passwordConfirmInput, { target: { value: 'password123' } });
+        fireEvent.change(passwordInput, { target: { value: 'password123' } });
+        fireEvent.change(passwordConfirmInput, { target: { value: 'password123' } });
 
-    //     expect(passwordInput.value).toBe('password123');
-    //     expect(passwordConfirmInput.value).toBe('password123');
-    // });
+        expect(passwordInput.value).toBe('password123');
+        expect(passwordConfirmInput.value).toBe('password123');
+    });
 
     // test('form submission works correctly', async () => {
     //     global.fetch = jest.fn(() =>
