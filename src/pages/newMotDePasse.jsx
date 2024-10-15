@@ -47,7 +47,7 @@ export default function NewMotDePasse() {
                             <input data-testid="password-confirm-input" type="password" className="password2" name="password" placeholder="Mot de passe" />
                         </div>
                         <div>
-                            <button type="submit">S'inscrire</button>
+                            <button onClick={handleForm} type="submit">S'inscrire</button>
                         </div>
                     </form>
                     <p>Vous avez déjà un compte ?</p>
