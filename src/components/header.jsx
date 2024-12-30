@@ -12,8 +12,8 @@ export default function Header() {
                     <ul>
                         <li><Link to="/">Accueil</Link></li>
                         <li><Link to="/activities">Activités</Link></li>
-                        <li><Link to="/discussions">Discussions</Link></li>
-                        <li><Link to="/profile">Profile</Link></li>
+                        {/* <li><Link to="/discussions">Discussions</Link></li> */}
+                        <li><Link to="/profile">Profil</Link></li>
                     </ul>
                 </nav>
                 <Link to="/connection" id="connect">Se connecter</Link>

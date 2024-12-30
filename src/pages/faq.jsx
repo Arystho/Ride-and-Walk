@@ -1,9 +1,17 @@
+import { useEffect } from 'react';
 import '../styles/faq.css';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
 
 export default function Faq() {
+    useEffect(() => {
+        // Supprimer TOUTES les classes qui se trouvent sur le body
+        document.querySelector('body').removeAttribute('class');
+
+        // Ajouter la classe adequate sur le body
+        document.querySelector('body').classList.add('faq');
+    });
     return (
         <>
             <Header />
@@ -13,7 +21,7 @@ export default function Faq() {
                         <div className="container">
                             <div className="titles">
                                 <h1>Ride & Walk</h1>
-                                <h2>Trouver votre spot idéal</h2>
+                                <h2>FAQ</h2>
                             </div>
                             <div>
                                 <h3>Qu'est-ce que DécouvreTaRégion ?</h3>

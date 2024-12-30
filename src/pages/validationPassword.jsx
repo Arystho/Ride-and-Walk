@@ -1,3 +1,4 @@
+import React from 'react';
 import '../styles/validationPassword.css';
 import { Link } from 'react-router-dom';
 

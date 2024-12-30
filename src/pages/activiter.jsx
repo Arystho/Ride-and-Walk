@@ -1,30 +1,71 @@
-import { useEffect } from 'react';
-import '../styles/accueil.css';
+import { useState, useEffect } from 'react';
+import '../styles/activiter.css';
 import { Link } from 'react-router-dom';
 import Header from '../components/header';
 import Footer from '../components/footer';
 
+export default function Activiter() {
+    // Ajouter un state pour stocker les resorts
+    const [resorts, setResorts] = useState([]);
+    const [isLoading, setIsLoading] = useState(true);
+    const [error, setError] = useState(null);
 
-export default function Accueil() {
     useEffect(() => {
         // Supprimer TOUTES les classes qui se trouvent sur le body
         document.querySelector('body').removeAttribute('class');
 
         // Ajouter la classe adequate sur le body
-        document.querySelector('body').classList.add('accueil');
-    });
+        document.querySelector('body').classList.add('activiter');
 
+        // Charger les resorts au montage du composant
+        chargerResorts();
+    }, []);
+
+    async function chargerResorts() {
+        try {
+            setIsLoading(true);
+            const reponse = await fetch('src/data/data.json'); // Assurez-vous du bon chemin
+            
+            if (!reponse.ok) {
+                throw new Error(`Erreur HTTP: ${reponse.status}`);
+            }
+    
+            const donnees = await reponse.json();
+            setResorts(donnees.resorts);
+            setIsLoading(false);
+    
+        } catch (erreur) {
+            console.error('Erreur de chargement:', erreur);
+            setError(erreur.message);
+            setIsLoading(false);
+        }
+    }
+
+    // Fonction pour rendre les étoiles dynamiquement
+    const renderStars = () => {
+        return Array.from({ length: 5 }, (_, index) => (
+            <i 
+                key={index} 
+                className={`fa-solid fa-star${index < 5 ? '' : ' '}`} 
+            />
+        ));
+    };
+
+    // Gestion des états de chargement et d'erreur
+    if (isLoading) {
+        return <div>Chargement en cours...</div>;
+    }
+
+    if (error) {
+        return <div>Erreur : {error}</div>;
+    }
 
     return (
         <>
             <Header />
             <main>
-                <section id="section-1">
+            <section id="section-1">
                     <div className="background-container">
-                        <div className="container">
-                            <h1>Ride & Walk</h1>
-                            <h2>Trouver votre spot idéal</h2>
-                        </div>
                         <div id="nav-container">
                             <form>
                                 <div className="select-container">
@@ -162,105 +203,25 @@ export default function Accueil() {
                     </div>
                 </section>
                 <section id="section-2">
-                    <h2>Destination populaire d'activités</h2>
+                    <h2>Activités de votre choix</h2>
                     <div className="destination-container">
-                        <Link to="#">
-                            <article className="destination">
-                                <img src="/la-plagette.jpg" alt="img" />
-                                <div>
-                                    <h3>La Plagette</h3>
-                                    <p>Sillans-La-Cascade 83690</p>
-                                </div>
-                                <div className="star">
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star "></i>
-                                    <i className="fa-solid fa-star"></i>
-                                </div>
-                            </article>
-                        </Link>
-                        <Link to="#">
-                            <article className="destination">
-                                <img src="/cascade-et-gorges-de-pennafort.jpg" alt="img" />
-                                <div>
-                                    <h3>Cascade et Gorges de Pennafort</h3>
-                                    <p>Callas 83830</p>
-                                </div>
-                                <div className="star">
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star "></i>
-                                    <i className="fa-solid fa-star"></i>
-                                </div>
-                            </article>
-                        </Link>
-                        <Link to="#">
-                            <article className="destination">
-                                <img src="/chute-du-tomberau.jpg" alt="img" />
-                                <div>
-                                    <h3>Chute du Tomberau</h3>
-                                    <p>Bras 83149</p>
-                                </div>
-                                <div className="star">
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star "></i>
-                                    <i className="fa-solid fa-star"></i>
-                                </div>
-                            </article>
-                        </Link>
-                        <Link to="#">
-                            <article className="destination">
-                                <img src="/skatepark-hyeres.jpg" alt="img" />
-                                <div>
-                                    <h3>SkatePrak Hyères
-                                    </h3>
-                                    <p>Hyères 83400</p>
-                                </div>
-                                <div className="star">
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star "></i>
-                                    <i className="fa-solid fa-star"></i>
-                                </div>
-                            </article>
-                        </Link>
-                        <Link to="#" className="destination">
-                            <article>
-                                <img src="/skatepark-yann-casasreales.jpg" alt="img" />
-                                <div>
-                                    <h3>SkatePark Yann Casasreales</h3>
-                                    <p>Saint-Cyr-sur-Mer 83270</p>
-                                </div>
-                                <div className="star">
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star "></i>
-                                    <i className="fa-solid fa-star"></i>
-                                </div>
-                            </article>
-                        </Link>
-                        <Link to="#" className="destination">
-                            <article>
-                                <img src="/skatepark 2.jpg" alt="img" />
-                                <div>
-                                    <h3>SkatePark Bormes les Mimosas</h3>
-                                    <p>Bormes les Mimosas 83200</p>
-                                </div>
-                                <div className="star">
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star"></i>
-                                    <i className="fa-solid fa-star "></i>
-                                    <i className="fa-solid fa-star"></i>
-                                </div>
-                            </article>
-                        </Link>
+                        {resorts.map(resort => (
+                            <Link key={resort.id} to={`/appDetail/${resort.id}`}>
+                                <article className="destination">
+                                    <img 
+                                        src={`/${resort.image}`} 
+                                        alt={resort.nom} 
+                                    />
+                                    <div>
+                                        <h3>{resort.nom}</h3>
+                                        <p>{resort.adresse}</p>
+                                    </div>
+                                    <div className="star">
+                                        {renderStars()}
+                                    </div>
+                                </article>
+                            </Link>
+                        ))}
                     </div>
                 </section>
             </main>

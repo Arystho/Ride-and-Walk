@@ -1,66 +1,92 @@
-#inscription {
-    height: 100vh;
-}
+.inscription {
+    #inscription {
+        height: 100vh;
+    }
 
-.background-inscription {
-    background-image: url('/pexels-anastasia-shuraeva-8926961.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
+    .background-inscription {
+        background-image: url('/pexels-anastasia-shuraeva-8926961.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-.signup-container {
-    background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
-    border: 0.5px solid var(--blue);
-    padding: 32px;
-    border-radius: 10px;
-    text-align: center;
-    height: fit-content;
-    margin: auto;
-}
+    .signup-container {
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border: 0.5px solid var(--blue);
+        padding: 32px;
+        border-radius: 10px;
+        text-align: center;
+        height: fit-content;
+        margin: auto;
+    }
 
-.signup-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid var(--blue);
-}
+    .signup-container .input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid var(--blue);
+    }
 
-.signup-container form p {
-    color: var(--white);
-    font-size: 12px;
-    text-align: left;
-}
+    .signup-container form p {
+        color: var(--white);
+        font-size: 12px;
+        text-align: left;
+    }
 
-.signup-container button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid var(--blue);
-    background: var(--blue);
-    color: var(--white);
-}
+    .signup-container button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid var(--blue);
+        background: var(--blue);
+        color: var(--white);
+    }
 
-.signup-container button:hover {
-    background: var(--white);
-    color: var(--blue);
-}
+    .signup-container button:hover {
+        background: var(--white);
+        color: var(--blue);
+    }
 
-.signup-container a {
-    color: var(--white);
-    font-size: 12px;
-}
+    .signup-container a {
+        color: var(--white);
+        font-size: 12px;
+    }
 
-.signup-container a:hover {
-    color: var(--blue);
-}
+    .signup-container a:hover {
+        color: var(--blue);
+    }
 
-.logo {
-    width: 125px;
+    .logo {
+        width: 125px;
+    }
+    #forgoten {
+        display: flex;
+        align-items: center;
+        gap: 10px;
+        justify-content: center;
+    }
+    #forgoten p {
+        font-size: 12px;
+    }
+    #link {
+        color: var(--blue);
+        font-size: 12px;
+    }
+    #link:hover {
+        color: var(--white);
+    }
+    #checkbox {
+        display: flex;
+        gap: 5px;
+    }
+    #checkbox-label {
+        color: var(--white);
+        font-size: 12px;
+    }
 }

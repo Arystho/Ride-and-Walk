@@ -1,87 +1,89 @@
-#mot-de-passe-oublie {
-    height: 100vh;
-}
+.motDePasseOublier {
+    #mot-de-passe-oublie {
+        height: 100vh;
+    }
 
-.background-mdp-oublie {
-    background-image: url('/pexels-anastasia-shuraeva-8926961.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
+    .background-mdp-oublie {
+        background-image: url('/pexels-anastasia-shuraeva-8926961.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
 
-.mdp-oublie-container {
-    background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
-    border: 0.5px solid var(--blue);
-    padding: 36px;
-    border-radius: 10px;
-    text-align: center;
-    width: 90%;
-    max-width: 400px;
-    margin: auto;
-}
+    .mdp-oublie-container {
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border: 0.5px solid var(--blue);
+        padding: 36px;
+        border-radius: 10px;
+        text-align: center;
+        width: 90%;
+        max-width: 400px;
+        margin: auto;
+    }
 
-.mdp-oublie-container input {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid var(--blue);
-    box-sizing: border-box;
-}
+    .mdp-oublie-container input {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid var(--blue);
+        box-sizing: border-box;
+    }
 
-.mdp-oublie-container form p {
-    color: var(--white);
-    font-size: 12px;
-    text-align: left;
-    margin-bottom: 5px;
-}
+    .mdp-oublie-container form p {
+        color: var(--white);
+        font-size: 12px;
+        text-align: left;
+        margin-bottom: 5px;
+    }
 
-.mdp-oublie-container button {
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid var(--blue);
-    background: var(--blue);
-    color: var(--white);
-    cursor: pointer;
-    transition: all 0.3s ease;
-}
+    .mdp-oublie-container button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid var(--blue);
+        background: var(--blue);
+        color: var(--white);
+        cursor: pointer;
+        transition: all 0.3s ease;
+    }
 
-.mdp-oublie-container button:hover {
-    background: var(--white);
-    color: var(--blue);
-}
+    .mdp-oublie-container button:hover {
+        background: var(--white);
+        color: var(--blue);
+    }
 
-.mdp-oublie-container a {
-    color: var(--white);
-    font-size: 12px;
-    text-decoration: none;
-    transition: color 0.3s ease;
-}
+    .mdp-oublie-container a {
+        color: var(--white);
+        font-size: 12px;
+        text-decoration: none;
+        transition: color 0.3s ease;
+    }
 
-.mdp-oublie-container a:hover {
-    color: var(--blue);
-}
+    .mdp-oublie-container a:hover {
+        color: var(--blue);
+    }
 
-.logo {
-    width: 125px;
-    max-width: 100%;
-    height: auto;
-}
+    .logo {
+        width: 125px;
+        max-width: 100%;
+        height: auto;
+    }
 
-.mdp-oublie-container h2 {
-    color: var(--white);
-    margin-bottom: 15px;
-}
+    .mdp-oublie-container h2 {
+        color: var(--white);
+        margin-bottom: 15px;
+    }
 
-.mdp-oublie-container > p {
-    color: var(--white);
-    font-size: 14px;
-    margin-bottom: 20px;
+    .mdp-oublie-container>p {
+        color: var(--white);
+        font-size: 14px;
+        margin-bottom: 20px;
+    }
 }

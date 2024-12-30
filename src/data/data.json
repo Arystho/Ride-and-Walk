@@ -1,0 +1,46 @@
+{
+    "resorts": [
+        {
+            "id": "1",
+            "image": "../../public/la-plagette.jpg",
+            "nom": "La Plagette",
+            "adresse": "Sillans-La-Cascade 83690",
+            "description": "blablabla"
+        },
+        {
+            "id": "2",
+            "image": "../../public/cascade-et-gorges-de-pennafort.jpg",
+            "nom": "Cascade et Gorges de Pennafort",
+            "adresse": "Callas 83830",
+            "description": "blablabla"
+        },
+        {
+            "id": "3",
+            "image": "../../public/chute-du-tomberau.jpg",
+            "nom": "Chute du Tomberau",
+            "adresse": "Bras 83149",
+            "description": "blablabla"
+        },
+        {
+            "id": "4",
+            "image": "../../public/skatepark-hyeres.jpg",
+            "nom": "Skatepark Hyères",
+            "adresse": "Hyères 83400",
+            "description": "blablabla"
+        },
+        {
+            "id": "5",
+            "image": "../../public/skatepark-yann-casasreales.jpg",
+            "nom": "SkatePark Yann Casasreales",
+            "adresse": "Saint-Cyr-sur-Mer 83270",
+            "description": "blablabla"
+        },
+        {
+            "id": "6",
+            "image": "../../public/skatepark-bormes-les-mimosas.jpg",
+            "nom": "SkatePark Bormes les Mimosas",
+            "adresse": "Bormes les Mimosas 83200",
+            "description": "blablabla"
+        }
+    ]
+}

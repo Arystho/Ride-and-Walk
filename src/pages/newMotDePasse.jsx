@@ -1,7 +1,15 @@
+import { useEffect } from 'react';
 import '../styles/newMotDePasse.css';
 import { Link, useNavigate } from 'react-router-dom';
 
 export default function NewMotDePasse() {
+    useEffect(() => {
+        // Supprimer TOUTES les classes qui se trouvent sur le body
+        document.querySelector('body').removeAttribute('class');
+
+        // Ajouter la classe adequate sur le body
+        document.querySelector('body').classList.add('newMotDePasse');
+    });
     const navigate = useNavigate();
     const handleForm = async (e) => {
         e.preventDefault();

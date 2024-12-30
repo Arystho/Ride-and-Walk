@@ -1,72 +1,90 @@
-.background-connection{
-    background-image: url('/pexels-anastasia-shuraeva-8926961.jpg');
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
-    height: 100%;
-    display: flex;
-    justify-content: center;
-}
+.connection {
+    .background-connection {
+        background-image: url('/pexels-anastasia-shuraeva-8926961.jpg');
+        background-size: cover;
+        background-position: center;
+        background-repeat: no-repeat;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+    }
 
-.main-connection{
-    height: 100vh;
-}
+    .main-connection {
+        height: 100vh;
+    }
 
-.login-container{
-    background-color: rgba(0, 0, 0, 0.1);
-    backdrop-filter: blur(8px);
-    border: 0.5px solid var(--blue);
-    padding: 36px;
-    border-radius: 10px;
-    text-align: center;
-    height: fit-content;
-    margin: auto;
-}
+    .login-container {
+        background-color: rgba(0, 0, 0, 0.1);
+        backdrop-filter: blur(8px);
+        border: 0.5px solid var(--blue);
+        padding: 36px;
+        border-radius: 10px;
+        text-align: center;
+        height: fit-content;
+        margin: auto;
+    }
 
-.login-container input{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid var(--blue);
-}
+    .login-container .barre {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid var(--blue);
+    }
 
-.login-container form p{
-    color: var(--white);
-    font-size: 12px;
-    text-align: left;
-}
+    .login-container form p {
+        color: var(--white);
+        font-size: 12px;
+        text-align: left;
+    }
 
-.login-container button{
-    width: 100%;
-    padding: 10px;
-    margin: 10px 0;
-    border-radius: 5px;
-    border: 1px solid var(--blue);
-    background: var(--blue);
-    color: var(--white);
-}
+    .login-container button {
+        width: 100%;
+        padding: 10px;
+        margin: 10px 0;
+        border-radius: 5px;
+        border: 1px solid var(--blue);
+        background: var(--blue);
+        color: var(--white);
+    }
 
-.login-container button:hover{
-    background: var(--white);
-    color: var(--blue);
-}
+    .login-container button:hover {
+        background: var(--white);
+        color: var(--blue);
+    }
 
-.login-container a{
-    color: var(--white);
-    font-size: 12px;
-}
+    .login-container a {
+        color: var(--white);
+        font-size: 12px;
+    }
 
-.login-container a:hover{
-    color: var(--blue);
-}
+    .login-container a:hover {
+        color: var(--blue);
+    }
 
-.forgot{
-    color: var(--white);
-    font-size: 12px;
-    display: flex;
-}
+    .forgot {
+        color: var(--white);
+        font-size: 12px;
+        display: flex;
+    }
+    
+    .logo {
+        width: 125px;
+    }
 
-.logo{
-    width: 125px;
+    #checkbox-container {
+        display: flex;
+        gap: 15px;
+        align-items: center;
+    }
+
+    #checkbox {
+        display: flex;
+        gap: 5px;
+    }
+
+    #checkbox-label {
+        color: var(--white);
+        font-size: 12px;
+    }
 }
